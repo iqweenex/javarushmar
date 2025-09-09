@@ -4,7 +4,9 @@ from gpt import *
 from util import *
 
 async def start(update, context):
-    await send_text(update. context, "Старт")
+    text = load_message("main")
+    await send_photo(update, context, "main")
+    await send_text(update, context, text)
 
 # тут будем писать наш код :)
 async def hello(update, context):
@@ -27,6 +29,6 @@ async def hello_buttons(update, context):
 
 app = ApplicationBuilder().token("7771358337:AAF_6deTgmKK50Be7IG5L7jg2XXqYLpFWhc").build()
 app.add_handler(CommandHandler("start", start))
-app.add_handler(MessageHandler(filters.TEXT, hello))
+app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, hello))
 app.add_handler(CallbackQueryHandler(hello_buttons))
 app.run_polling()
