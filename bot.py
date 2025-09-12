@@ -133,7 +133,7 @@ dialog.list = []
 chatgpt = ChatGptService(
     token="ujavcgkAld/r/7U60nS8WDUhWeWVYkZbhjQYpKBFGTvoj5842ast7Pxc54epaCxHRBWXa4vjUutckFaoaUmyOdt62mPPZjjrSFzHlklUvRxjKkD54HiY1iMRLus7TxOkcmPElgqCRPBocX6wJsuWbUTuGkgPNjhYwE08Bvau9oVOiaBcWnUrI/ewY+ccVqx7dnAN4A7RhT46B8BjZjVtU/H8jZakz1cJir+37f/KOL/cTVnmJo=")
 
-app = ApplicationBuilder().token("7771358337:AAF_6deTgmKK50Be7IG5L7jg2XXqYLpFWhc").build()
+app = ApplicationBuilder().token("7771358337:AAF_6deTgmKK50Be7IG5L7jg2XXqYLpFWhс").build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("gpt", gpt))
 app.add_handler(CommandHandler("date", date))
